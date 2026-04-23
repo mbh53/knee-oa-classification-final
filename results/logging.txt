@@ -1,0 +1,150 @@
+Script started on 2026-04-22 15:30:15-04:00 [TERM="screen" TTY="/dev/pts/8" COLUMNS="116" LINES="33"]
+(myenv) \u@\h:\w$ CUDA_VISIBLE_DEVICES=0 python train_dinov2.py
+Using device: cuda:0
+GPU name: Quadro RTX 8000
+
+=== Running: 20.0% | Freeze=True ===
+Train: 531 | Val: 665 | Test: 832
+Train class counts -> NoKnee_OA: 374, Knee_OA: 157
+Epoch 1/15 | Train Loss 0.6789 | Train F1 0.5000 | Val Loss 0.5442 | Val F1 0.6389 | Val Macro-F1 0.7093 | Val AUC 0.8521
+Epoch 2/15 | Train Loss 0.5330 | Train F1 0.6158 | Val Loss 0.5009 | Val F1 0.7003 | Val Macro-F1 0.7993 | Val AUC 0.8740
+Epoch 3/15 | Train Loss 0.5897 | Train F1 0.5777 | Val Loss 0.7133 | Val F1 0.2643 | Val Macro-F1 0.5565 | Val AUC 0.8799
+Epoch 4/15 | Train Loss 0.5057 | Train F1 0.6547 | Val Loss 0.5044 | Val F1 0.6875 | Val Macro-F1 0.7942 | Val AUC 0.8849
+Epoch 5/15 | Train Loss 0.4589 | Train F1 0.6925 | Val Loss 0.4441 | Val F1 0.7011 | Val Macro-F1 0.7702 | Val AUC 0.8919
+Epoch 6/15 | Train Loss 0.4455 | Train F1 0.6966 | Val Loss 0.8921 | Val F1 0.3207 | Val Macro-F1 0.5867 | Val AUC 0.8887
+Epoch 7/15 | Train Loss 0.5147 | Train F1 0.6647 | Val Loss 0.5103 | Val F1 0.6033 | Val Macro-F1 0.6387 | Val AUC 0.8912
+Early stopping.
+Test Results:
+  accuracy: 0.8654
+  precision: 0.8941
+  recall: 0.6179
+  f1: 0.7308
+  macro_f1: 0.8205
+  roc_auc: 0.9188
+  loss: 0.4729
+
+=== Running: 20.0% | Freeze=False ===
+Train: 531 | Val: 665 | Test: 832
+Train class counts -> NoKnee_OA: 374, Knee_OA: 157
+Epoch 1/15 | Train Loss 0.8088 | Train F1 0.3827 | Val Loss 0.7687 | Val F1 0.0000 | Val Macro-F1 0.4120 | Val AUC 0.5351
+Epoch 2/15 | Train Loss 0.7587 | Train F1 0.3583 | Val Loss 0.6961 | Val F1 0.4549 | Val Macro-F1 0.2735 | Val AUC 0.5140
+Epoch 3/15 | Train Loss 0.7011 | Train F1 0.3980 | Val Loss 0.6951 | Val F1 0.1106 | Val Macro-F1 0.4686 | Val AUC 0.5331
+Epoch 4/15 | Train Loss 0.7077 | Train F1 0.3427 | Val Loss 0.6941 | Val F1 0.4571 | Val Macro-F1 0.2285 | Val AUC 0.5132
+Epoch 5/15 | Train Loss 0.6966 | Train F1 0.3711 | Val Loss 0.6925 | Val F1 0.0000 | Val Macro-F1 0.4131 | Val AUC 0.5742
+Epoch 6/15 | Train Loss 0.6938 | Train F1 0.3736 | Val Loss 0.6965 | Val F1 0.4571 | Val Macro-F1 0.2285 | Val AUC 0.5256
+Epoch 7/15 | Train Loss 0.6878 | Train F1 0.3038 | Val Loss 0.6932 | Val F1 0.3688 | Val Macro-F1 0.5372 | Val AUC 0.5305
+Epoch 8/15 | Train Loss 0.7049 | Train F1 0.3865 | Val Loss 0.6930 | Val F1 0.1825 | Val Macro-F1 0.4957 | Val AUC 0.5884
+Epoch 9/15 | Train Loss 0.6887 | Train F1 0.3178 | Val Loss 0.6905 | Val F1 0.1333 | Val Macro-F1 0.4784 | Val AUC 0.5711
+Epoch 10/15 | Train Loss 0.6885 | Train F1 0.3026 | Val Loss 0.6907 | Val F1 0.1176 | Val Macro-F1 0.4709 | Val AUC 0.5770
+Epoch 11/15 | Train Loss 0.6850 | Train F1 0.2982 | Val Loss 0.6946 | Val F1 0.0100 | Val Macro-F1 0.4174 | Val AUC 0.5668
+Epoch 12/15 | Train Loss 0.6903 | Train F1 0.2009 | Val Loss 0.6920 | Val F1 0.0297 | Val Macro-F1 0.4280 | Val AUC 0.5538
+Early stopping.
+Test Results:
+  accuracy: 0.5745
+  precision: 0.3043
+  recall: 0.3415
+  f1: 0.3218
+  macro_f1: 0.5059
+  roc_auc: 0.5047
+  loss: 0.6975
+
+=== Running: 50.0% | Freeze=True ===
+Train: 1329 | Val: 665 | Test: 832
+Train class counts -> NoKnee_OA: 935, Knee_OA: 394
+Epoch 1/15 | Train Loss 0.6295 | Train F1 0.5380 | Val Loss 0.5756 | Val F1 0.5185 | Val Macro-F1 0.6979 | Val AUC 0.8887
+Epoch 2/15 | Train Loss 0.5271 | Train F1 0.6134 | Val Loss 0.4396 | Val F1 0.7673 | Val Macro-F1 0.8352 | Val AUC 0.8978
+Epoch 3/15 | Train Loss 0.4881 | Train F1 0.6590 | Val Loss 0.4565 | Val F1 0.7596 | Val Macro-F1 0.8390 | Val AUC 0.9052
+Epoch 4/15 | Train Loss 0.5277 | Train F1 0.6092 | Val Loss 0.4352 | Val F1 0.7814 | Val Macro-F1 0.8492 | Val AUC 0.8967
+Epoch 5/15 | Train Loss 0.4350 | Train F1 0.7010 | Val Loss 0.4029 | Val F1 0.7725 | Val Macro-F1 0.8411 | Val AUC 0.9069
+Epoch 6/15 | Train Loss 0.4958 | Train F1 0.6524 | Val Loss 0.5314 | Val F1 0.6397 | Val Macro-F1 0.7681 | Val AUC 0.9059
+Epoch 7/15 | Train Loss 0.4510 | Train F1 0.6935 | Val Loss 0.4014 | Val F1 0.7576 | Val Macro-F1 0.8219 | Val AUC 0.9105
+Epoch 8/15 | Train Loss 0.4659 | Train F1 0.6728 | Val Loss 0.3931 | Val F1 0.7395 | Val Macro-F1 0.8075 | Val AUC 0.9092
+Epoch 9/15 | Train Loss 0.4529 | Train F1 0.6721 | Val Loss 0.4109 | Val F1 0.7867 | Val Macro-F1 0.8536 | Val AUC 0.9067
+Epoch 10/15 | Train Loss 0.4644 | Train F1 0.6856 | Val Loss 0.3874 | Val F1 0.7559 | Val Macro-F1 0.8204 | Val AUC 0.9121
+Epoch 11/15 | Train Loss 0.4296 | Train F1 0.7111 | Val Loss 0.4603 | Val F1 0.7356 | Val Macro-F1 0.8243 | Val AUC 0.9125
+Epoch 12/15 | Train Loss 0.4176 | Train F1 0.7003 | Val Loss 0.3874 | Val F1 0.7500 | Val Macro-F1 0.8115 | Val AUC 0.9141
+Epoch 13/15 | Train Loss 0.4448 | Train F1 0.6907 | Val Loss 0.3869 | Val F1 0.7472 | Val Macro-F1 0.8096 | Val AUC 0.9141
+Epoch 14/15 | Train Loss 0.4788 | Train F1 0.6607 | Val Loss 0.4327 | Val F1 0.6667 | Val Macro-F1 0.7236 | Val AUC 0.9171
+Early stopping.
+Test Results:
+  accuracy: 0.8918
+  precision: 0.8939
+  recall: 0.7195
+  f1: 0.7973
+  macro_f1: 0.8618
+  roc_auc: 0.9330
+  loss: 0.3736
+
+=== Running: 50.0% | Freeze=False ===
+Train: 1329 | Val: 665 | Test: 832
+Train class counts -> NoKnee_OA: 935, Knee_OA: 394
+Epoch 1/15 | Train Loss 0.7519 | Train F1 0.3624 | Val Loss 0.7015 | Val F1 0.4571 | Val Macro-F1 0.2285 | Val AUC 0.5382
+Epoch 2/15 | Train Loss 0.6955 | Train F1 0.3774 | Val Loss 0.6907 | Val F1 0.0585 | Val Macro-F1 0.4435 | Val AUC 0.5598
+Epoch 3/15 | Train Loss 0.6917 | Train F1 0.3494 | Val Loss 0.6875 | Val F1 0.0826 | Val Macro-F1 0.4514 | Val AUC 0.6090
+Epoch 4/15 | Train Loss 0.6971 | Train F1 0.3142 | Val Loss 0.6899 | Val F1 0.3655 | Val Macro-F1 0.5492 | Val AUC 0.5590
+Epoch 5/15 | Train Loss 0.6929 | Train F1 0.3988 | Val Loss 0.7119 | Val F1 0.0198 | Val Macro-F1 0.4221 | Val AUC 0.5669
+Epoch 6/15 | Train Loss 0.6932 | Train F1 0.2593 | Val Loss 0.6837 | Val F1 0.3333 | Val Macro-F1 0.5343 | Val AUC 0.5802
+Epoch 7/15 | Train Loss 0.7034 | Train F1 0.3727 | Val Loss 0.6926 | Val F1 0.0000 | Val Macro-F1 0.4131 | Val AUC 0.5553
+Epoch 8/15 | Train Loss 0.6933 | Train F1 0.0199 | Val Loss 0.6926 | Val F1 0.0000 | Val Macro-F1 0.4131 | Val AUC 0.5554
+Epoch 9/15 | Train Loss 0.6925 | Train F1 0.0879 | Val Loss 0.6926 | Val F1 0.4589 | Val Macro-F1 0.3184 | Val AUC 0.5653
+Early stopping.
+Test Results:
+  accuracy: 0.5974
+  precision: 0.3308
+  recall: 0.3537
+  f1: 0.3418
+  macro_f1: 0.5259
+  roc_auc: 0.5516
+  loss: 0.6896
+
+=== Running: 100.0% | Freeze=True ===
+Train: 2659 | Val: 665 | Test: 832
+Train class counts -> NoKnee_OA: 1871, Knee_OA: 788
+Epoch 1/15 | Train Loss 0.5945 | Train F1 0.5866 | Val Loss 0.5777 | Val F1 0.5408 | Val Macro-F1 0.5160 | Val AUC 0.8841
+Epoch 2/15 | Train Loss 0.4811 | Train F1 0.6728 | Val Loss 0.4291 | Val F1 0.7186 | Val Macro-F1 0.7844 | Val AUC 0.9014
+Epoch 3/15 | Train Loss 0.4725 | Train F1 0.6806 | Val Loss 0.4230 | Val F1 0.7778 | Val Macro-F1 0.8477 | Val AUC 0.9031
+Epoch 4/15 | Train Loss 0.4456 | Train F1 0.6878 | Val Loss 0.6189 | Val F1 0.5362 | Val Macro-F1 0.7074 | Val AUC 0.9084
+Epoch 5/15 | Train Loss 0.4474 | Train F1 0.6989 | Val Loss 0.4105 | Val F1 0.7608 | Val Macro-F1 0.8382 | Val AUC 0.9137
+Epoch 6/15 | Train Loss 0.4416 | Train F1 0.6944 | Val Loss 0.4049 | Val F1 0.7004 | Val Macro-F1 0.7617 | Val AUC 0.9143
+Epoch 7/15 | Train Loss 0.4344 | Train F1 0.7089 | Val Loss 0.4820 | Val F1 0.6901 | Val Macro-F1 0.7974 | Val AUC 0.9137
+Epoch 8/15 | Train Loss 0.4312 | Train F1 0.7040 | Val Loss 0.3957 | Val F1 0.7215 | Val Macro-F1 0.7837 | Val AUC 0.9199
+Early stopping.
+Test Results:
+  accuracy: 0.8930
+  precision: 0.8945
+  recall: 0.7236
+  f1: 0.8000
+  macro_f1: 0.8635
+  roc_auc: 0.9305
+  loss: 0.3920
+
+=== Running: 100.0% | Freeze=False ===
+Train: 2659 | Val: 665 | Test: 832
+Train class counts -> NoKnee_OA: 1871, Knee_OA: 788
+Epoch 1/15 | Train Loss 0.7396 | Train F1 0.3701 | Val Loss 0.6883 | Val F1 0.3914 | Val Macro-F1 0.5321 | Val AUC 0.5536
+Epoch 2/15 | Train Loss 0.6975 | Train F1 0.3883 | Val Loss 0.6913 | Val F1 0.4316 | Val Macro-F1 0.4375 | Val AUC 0.5513
+Epoch 3/15 | Train Loss 0.6922 | Train F1 0.3080 | Val Loss 0.6883 | Val F1 0.4739 | Val Macro-F1 0.3324 | Val AUC 0.7971
+Epoch 4/15 | Train Loss 0.6863 | Train F1 0.3701 | Val Loss 0.6869 | Val F1 0.1964 | Val Macro-F1 0.4934 | Val AUC 0.6256
+Epoch 5/15 | Train Loss 0.6935 | Train F1 0.1427 | Val Loss 0.6919 | Val F1 0.0000 | Val Macro-F1 0.4131 | Val AUC 0.6234
+Epoch 6/15 | Train Loss 0.6910 | Train F1 0.1062 | Val Loss 0.6850 | Val F1 0.1429 | Val Macro-F1 0.4780 | Val AUC 0.6640
+Early stopping.
+Test Results:
+  accuracy: 0.5697
+  precision: 0.3170
+  recall: 0.3943
+  f1: 0.3514
+  macro_f1: 0.5148
+  roc_auc: 0.5225
+  loss: 0.6921
+
+===== Final Results =====
+   data_percent  freeze_backbone  accuracy  precision    recall        f1  macro_f1   roc_auc      loss
+0           0.2             True  0.865385   0.894118  0.617886  0.730769  0.820513  0.918755  0.472897
+1           0.2            False  0.574519   0.304348  0.341463  0.321839  0.505928  0.504724  0.697489
+2           0.5             True  0.891827   0.893939  0.719512  0.797297  0.861763  0.932989  0.373552
+3           0.5            False  0.597356   0.330798  0.353659  0.341847  0.525902  0.551562  0.689564
+4           1.0             True  0.893029   0.894472  0.723577  0.800000  0.863495  0.930478  0.392007
+5           1.0            False  0.569712   0.316993  0.394309  0.351449  0.514753  0.522503  0.692065
+
+Saved results to: ./dinov2_outputs/all_results.csv
+(myenv) \u@\h:\w$ 
