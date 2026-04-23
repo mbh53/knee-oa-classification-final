@@ -58,7 +58,7 @@ Some subjects have one radiograph (left or right knee), while others have both. 
 ## Discussion (TO BE ADDED)
 - Effect of dataset size on performance (20% → 100%)
 - Model behavior under low-data vs full-data regimes
-- Effectiveness of pretrained DINOv2 feature extraction
+- Effectiveness of pretrained DINOv2 (**edit if other model(s) used) feature extraction
 - Stability and consistency across runs
 
 ## Conclusion (TO BE ADDED)
