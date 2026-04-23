@@ -8,6 +8,7 @@ This project implements a binary classification model to detect Knee Osteoarthri
 The dataset consists of anterior-posterior (AP) knee radiographs organized into two classes:
 - **Knee OA**
 - **No-Knee OA**
+
 The dataset contains 4,156 images from 2,655 unique subjects. Each image is labeled based on the Kellgren–Lawrence (KL) grading system:
 - KL < 2 → No OA
 - KL ≥ 2 → OA
