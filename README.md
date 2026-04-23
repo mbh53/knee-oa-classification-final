@@ -47,3 +47,19 @@ Some subjects have one radiograph (left or right knee), while others have both. 
 - 20% data
 - 50% data
 - 100% data
+
+## Results (TO BE ADDED)
+| Data % | Accuracy | Precision | Recall | F1-score | Macro-F1 | ROC-AUC |
+|--------|----------|-----------|--------|----------|----------|---------|
+| 20%    |          |           |        |          |          |         |
+| 50%    |          |           |        |          |          |         |
+| 100%   |          |           |        |          |          |         |
+
+## Discussion (TO BE ADDED)
+- Effect of dataset size on performance (20% → 100%)
+- Model behavior under low-data vs full-data regimes
+- Effectiveness of pretrained DINOv2 feature extraction
+- Stability and consistency across runs
+
+## Conclusion (TO BE ADDED)
+This project investigates the use of vision foundation models for automated knee osteoarthritis detection and evaluates how data availability impacts classification performance in a medical imaging setting.
