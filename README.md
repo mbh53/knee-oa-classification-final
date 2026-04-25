@@ -95,10 +95,24 @@ All experiments use the same architecture and training settings to ensure fair c
 - Performance improves substantially from 20% to 50% of the data, with only small gains from 50% to 100%.
 - Fine-tuning leads to unstable training and significantly worse performance, particularly in low-data settings.
   
-### Figures (TO BE ADDED)
-- ROC curves for each data regime??  
-- Training vs validation loss curves??  
-- Confusion matrices??
+### Figures
+
+- **ROC Curves** - Performance comparison across data regimes and adaptation strategies
+![ROC Curves](dinov2_outputs/roc_curves.png)
+
+- **Data Efficiency** - How model performance scales with training data availability
+![Data Efficiency](dinov2_outputs/data_efficiency.png)
+
+- **Precision-Recall Curves** - Trade-off between precision and recall for each configuration
+![PR Curves](dinov2_outputs/precision_recall_curves.png)
+
+- **Confusion Matrices** - Per-configuration classification results
+  - [20% Frozen](dinov2_outputs/confusion_matrices/cm_20pct_frozen.png)
+  - [20% Fine-tuned](dinov2_outputs/confusion_matrices/cm_20pct_finetuned.png)
+  - [50% Frozen](dinov2_outputs/confusion_matrices/cm_50pct_frozen.png)
+  - [50% Fine-tuned](dinov2_outputs/confusion_matrices/cm_50pct_finetuned.png)
+  - [100% Frozen](dinov2_outputs/confusion_matrices/cm_100pct_frozen.png)
+  - [100% Fine-tuned](dinov2_outputs/confusion_matrices/cm_100pct_finetuned.png)
 
 ---
 
