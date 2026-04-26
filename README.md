@@ -124,8 +124,8 @@ All experiments use the same architecture and training settings to ensure fair c
 2. **Model Behavior**
 - Across all dataset sizes, the model performs well when using frozen backbone, indicating that pretrained features generalize effectively to knee OA classification. Performance remains strong even in the low-data setting, suggesting the learned representations from DINOv2 are highly transferable to this medical imaging task.
 
-3. **Adaptiation Strategy**
-- FIne-tuning the full model does not improve performance and leads to instability and poor generalization. This is likely due to the smaller dataset size and overfitting of the model. Lower accuracy, F1-score, and ROC-AUC were observed across all data settings.
+3. **Adaptation Strategy**
+- Fine-tuning the full model does not improve performance and leads to instability and poor generalization. This is likely due to the smaller dataset size and overfitting of the model. Lower accuracy, F1-score, and ROC-AUC were observed across all data settings.
 
 4. **Stability**
 - The frozen backbone configuration is significantly more stable across training runs and dataset sizes. It produces consistent and high-performing results. In comparison, fine-tuning leads to unstable training behavior and poor generalization especially in the low-data run.
