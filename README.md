@@ -91,46 +91,60 @@ All experiments use the same architecture and training settings to ensure fair c
 
 ### Key Observations
 
-- Frozen backbone models consistently outperform fine-tuned models across all data regimes.
-- Performance improves substantially from 20% to 50% of the data, with only small gains from 50% to 100%.
-- Fine-tuning leads to unstable training and significantly worse performance, particularly in low-data settings.
+- Frozen backbone models consistently outperform fine-tuned models across all data regimes, demonstrating the effectiveness of pretrained features for this task.
+- Performance improves substantially from 20% to 50% of the data, with clear gains in accuracy, F1-Score, Macro-F1, and ROC-AUC. This indicates strong data efficiency in a low-data setting.
+- At 100% training data, performance does not further improve and slightly decreases across several metrics, suggesting limited returns and potential overfitting or optimization limitations.
+- Fine-tuning leads to unstable and inconsistent performance across all data regimes. Despite occasionally high recall and F1-scores, these models show low Macro-F1 and ROC-AUC, pointing to porr class balance and weak discrimination.
+- The discrepancy between F1-score and Macro-F1 in fine-tuned models highlights class imbalance effects, where performance is biased toward the majority class despite seemingly strong overall metrics.
   
 ### Figures
 
-- **ROC Curves** - Performance comparison across data regimes and adaptation strategies
+- **ROC Curves** - Curves are shown for all six data regimes and adaptation strategies. Frozen backbone models show consistently higher AUC, indicating stronger discriminitive ability. Fine-tuned models show curves closer to the diagonal, pointing to weaker classification performance.
 ![ROC Curves](dinov2_outputs/roc_curves.png)
 
-- **Data Efficiency** - How model performance scales with training data availability
+- **Data Efficiency** - This plot shows how model performance metrics change with training data availability. Performance improves significantly from 20% to 50%, but shows limited increases (and even slight decreases) at 100%.
 ![Data Efficiency](dinov2_outputs/data_efficiency.png)
 
-- **Precision-Recall Curves** - Trade-off between precision and recall for each configuration
+- **Precision-Recall Curves** - These curves highlight the trade-off between precision and recall for each configuration. Frozen models achieve stronger precision-recall, while fine-tuned models show more variability. In some cases, fine-tuned models do achieve high recall, but at the expense of a lower precision.
 ![PR Curves](dinov2_outputs/precision_recall_curves.png)
 
 - **Confusion Matrices** - Per-configuration classification results
-  - [20% Frozen](dinov2_outputs/confusion_matrices/cm_20pct_frozen.png)
-  - [20% Fine-tuned](dinov2_outputs/confusion_matrices/cm_20pct_finetuned.png)
-  - [50% Frozen](dinov2_outputs/confusion_matrices/cm_50pct_frozen.png)
-  - [50% Fine-tuned](dinov2_outputs/confusion_matrices/cm_50pct_finetuned.png)
-  - [100% Frozen](dinov2_outputs/confusion_matrices/cm_100pct_frozen.png)
-  - [100% Fine-tuned](dinov2_outputs/confusion_matrices/cm_100pct_finetuned.png)
+  - [20% Frozen] Good balance between classes; strong detection of OA cases (109 correct)
+    (dinov2_outputs/confusion_matrices/cm_20pct_frozen.png)
+  - [20% Fine-tuned] Poor performance - only 4 correct; model heavily biased toward predicting OA
+    (dinov2_outputs/confusion_matrices/cm_20pct_finetuned.png)
+  - [50% Frozen] Improved balance; fewer false negatives (38) and false positives (14); strong overall performance
+    (dinov2_outputs/confusion_matrices/cm_50pct_frozen.png)
+  - [50% Fine-tuned] Biased toward OA predication; high false positives (47) and false negatives (41); more balanced than 20% fine-tuned
+    (dinov2_outputs/confusion_matrices/cm_50pct_finetuned.png)
+  - [100% Frozen] More stable and balanced; low false positives (16) and false negatives (39); consistent performance across classes
+    (dinov2_outputs/confusion_matrices/cm_100pct_frozen.png)
+  - [100% Fine-tuned] Significant decline in performance; high false negatives (100)
+    (dinov2_outputs/confusion_matrices/cm_100pct_finetuned.png)
 
 ---
 
 ## Discussion
 
 1. **Data Efficiency**
-- Model performance improves significantly from 20% to 50% of the dataset, with smaller gains from 50% to 100%. This suggests that the pretrained DINOv2 model is relatively data-efficient when using pretrained features and the optimal percent is closer to 50% than 100%.
+- Model performance improves significantly from 20% to 50% of the dataset, with smaller gains from 50% to 100%. This suggests that the pretrained DINOv2 model is relatively data-efficient when using pretrained features and the optimal percent is closer to 20%-50% than 100%.
 
 2. **Model Behavior**
-- Across all dataset sizes, the model performs well when using frozen backbone, indicating that pretrained features generalize effectively to knee OA classification. Performance remains strong even in the low-data setting, suggesting the learned representations from DINOv2 are highly transferable to this medical imaging task.
+- Across all dataset sizes, the model performs well when using frozen backbone, indicating that pretrained features generalize effectively to knee OA classification. Performance remains strong even in the low-data setting, suggesting the learned representations from DINOv2 are highly transferable to this medical imaging task. Some fine-tuned runs achieved high metrics, but confusion matrices reveal this is misleading and due to a biased prediction towards the OA class.
 
 3. **Adaptation Strategy**
-- Fine-tuning the full model does not improve performance and leads to instability and poor generalization. This is likely due to the smaller dataset size and overfitting of the model. Lower accuracy, F1-score, and ROC-AUC were observed across all data settings.
+- Fine-tuning the full model does not improve performance and leads to instability and poor generalization. This is likely due to the smaller dataset size and overfitting of the model. Lower Macro-F1 and ROC-AUC scores were observed across all data settings along with class imbalance in predictions.
 
 4. **Stability**
-- The frozen backbone configuration is significantly more stable across training runs and dataset sizes. It produces consistent and high-performing results. In comparison, fine-tuning leads to unstable training behavior and poor generalization especially in the low-data run.
+- The frozen backbone configuration is significantly more stable across training runs and dataset sizes. It produces consistent and high-performing results with balanced predictions for classes. In comparison, fine-tuning leads to unstable training behavior and poor generalization especially in the low-data run.
 
 ---
 
 ## Conclusion 
-This project investigates the use of vision foundation models for automated knee osteoarthritis detection and evaluates how data availability impacts classification performance in a medical imaging setting. We demonstrate that vision foundation models such as DINOv2 can be effectively applied to medical imaging tasks like knee osteoarthritis classification. Using a frozen backbone with a simple MLP classifier provides strong performance, high stability, and efficient use of limited training data. These findings highlight the practical value of pretrained models in clinical applications where labeled data is limited.
+This project demonstrates the effectiveness of pretrained vision foundation models for automated knee osteoarthritis (OA) classification from radiographs. Using a DINOv2-based architecture, we evaluated model performance across varying data availability settings and adaptation strategies.
+
+Our results show that freezing the pretrained backbone consistently yeilds the best overall performance, achieving strong accuracy, balanced class predications, and high ROC-AUC across all data runs. Fine-tuning the model led to unstable behavior.
+
+We also observe that model performance improves significantly from 20% to 50%, with smaller gains beyond that point. This finding suggests that high-quality feature extraction from large-scale pretraining can compensate for small labeled medical datasets.
+
+This project highlights the practical value of vision foundation models in medical imaging applications. A simple architecture, using a frozen pretrained backbone with a lightweight classifer, can provide stable, efficient, and robust performance. This makes it suitable for real-world clinical settings, especially when data is limited.
