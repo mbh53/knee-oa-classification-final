@@ -102,10 +102,10 @@ All experiments use the same architecture and training settings to ensure fair c
 **ROC Curves:** Curves are shown for all six data regimes and adaptation strategies. Frozen backbone models show consistently higher AUC, indicating stronger discriminitive ability. Fine-tuned models show curves closer to the diagonal, pointing to weaker classification performance.
 ![ROC Curves](dinov2_outputs/roc_curves.png)
 
-- **Data Efficiency:** This plot shows how model performance metrics change with training data availability. Performance improves significantly from 20% to 50%, but shows limited increases (and even slight decreases) at 100%.
+**Data Efficiency:** This plot shows how model performance metrics change with training data availability. Performance improves significantly from 20% to 50%, but shows limited increases (and even slight decreases) at 100%.
 ![Data Efficiency](dinov2_outputs/data_efficiency.png)
 
-- **Precision-Recall Curves:** These curves highlight the trade-off between precision and recall for each configuration. Frozen models achieve stronger precision-recall, while fine-tuned models show more variability. In some cases, fine-tuned models do achieve high recall, but at the expense of a lower precision.
+**Precision-Recall Curves:** These curves highlight the trade-off between precision and recall for each configuration. Frozen models achieve stronger precision-recall, while fine-tuned models show more variability. In some cases, fine-tuned models do achieve high recall, but at the expense of a lower precision.
 ![PR Curves](dinov2_outputs/precision_recall_curves.png)
 
 ---
