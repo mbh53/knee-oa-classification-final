@@ -109,23 +109,23 @@ All experiments use the same architecture and training settings to ensure fair c
 ![PR Curves](dinov2_outputs/precision_recall_curves.png)
 
 - **Confusion Matrices** - Per-configuration classification results
-  - ![20% Frozen](dinov2_outputs/confusion_matrices/cm_20pct_frozen.png)
-  - 20% Frozen: Good balance between classes; strong detection of OA cases (109 correct)
+  ![20% Frozen](dinov2_outputs/confusion_matrices/cm_20pct_frozen.png)
+  20% Frozen: Good balance between classes; strong detection of OA cases (109 correct)
     
-  - ![20% Fine-tuned](dinov2_outputs/confusion_matrices/cm_20pct_finetuned.png)
-  - 20% Fine-tuned: Poor performance - only 4 correct; model heavily biased toward predicting OA
+  ![20% Fine-tuned](dinov2_outputs/confusion_matrices/cm_20pct_finetuned.png)
+  20% Fine-tuned: Poor performance - only 4 correct; model heavily biased toward predicting OA
     
-  - ![50% Frozen](dinov2_outputs/confusion_matrices/cm_50pct_frozen.png)
-  - 50% Frozen: Improved balance; fewer false negatives (38) and false positives (14); strong overall performance
+  ![50% Frozen](dinov2_outputs/confusion_matrices/cm_50pct_frozen.png)
+  50% Frozen: Improved balance; fewer false negatives (38) and false positives (14); strong overall performance
     
-  - ![50% Fine-tuned](dinov2_outputs/confusion_matrices/cm_50pct_finetuned.png)
-  - 50% Fine-tuned: Biased toward OA predication; high false positives (47) and false negatives (41); more balanced than 20% fine-tuned
+  ![50% Fine-tuned](dinov2_outputs/confusion_matrices/cm_50pct_finetuned.png)
+  50% Fine-tuned: Biased toward OA predication; high false positives (47) and false negatives (41); more balanced than 20% fine-tuned
     
-  - ![100% Frozen](dinov2_outputs/confusion_matrices/cm_100pct_frozen.png)
-  - 100% Frozen: More stable and balanced; low false positives (16) and false negatives (39); consistent performance across classes
+  ![100% Frozen](dinov2_outputs/confusion_matrices/cm_100pct_frozen.png)
+  100% Frozen: More stable and balanced; low false positives (16) and false negatives (39); consistent performance across classes
     
-  - ![100% Fine-tuned](dinov2_outputs/confusion_matrices/cm_100pct_finetuned.png)
-  - 100% Fine-tuned: Significant decline in performance; high false negatives (100)
+  ![100% Fine-tuned](dinov2_outputs/confusion_matrices/cm_100pct_finetuned.png)
+  100% Fine-tuned: Significant decline in performance; high false negatives (100)
 
 ---
 
